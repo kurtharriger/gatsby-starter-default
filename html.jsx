@@ -1,20 +1,16 @@
-import React from 'react'
-import DocumentTitle from 'react-document-title'
+import React from 'react';
+import DocumentTitle from 'react-document-title';
 
 import { link } from 'gatsby-helpers';
 import { TypographyStyle } from 'utils/typography'
 
 
 module.exports = React.createClass({
-  propTypes () {
-    return {
-      title: React.PropTypes.string,
-    }
-  },
-  render () {
-    let title = DocumentTitle.rewind()
+  render: function() {
+    var title;
+    title = DocumentTitle.rewind();
     if (this.props.title) {
-      title = this.props.title
+      title = this.props.title;
     }
 
     return (
@@ -22,19 +18,16 @@ module.exports = React.createClass({
         <head>
           <meta charSet="utf-8"/>
           <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0 maximum-scale=1.0"
-          />
+          <meta name='viewport' content='width=device-width, initial-scale=1.0 maximum-scale=1.0'/>
           <title>{title}</title>
           <link rel="shortcut icon" href={this.props.favicon}/>
           <TypographyStyle/>
         </head>
         <body>
           <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
-          <script src={link("/bundle.js")}/>
+          <script src="/bundle.js"/>
         </body>
       </html>
-    )
-  },
-})
+    );
+  }
+});

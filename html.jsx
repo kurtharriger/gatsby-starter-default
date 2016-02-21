@@ -22,8 +22,13 @@ module.exports = React.createClass({
           <title>{title}</title>
           <link rel="shortcut icon" href={this.props.favicon}/>
           <TypographyStyle/>
+
+          <script type="text/javascript" async
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+          </script>
         </head>
         <body>
+
           <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
           <script src="/bundle.js"/>
         </body>

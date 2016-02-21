@@ -13,11 +13,16 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "front-matter": "^2.0.6",
+    "highlight.js": "^9.1.0",
+    "markdown-it": "^6.0.0",
+    "markdown-it-mathjax": "^1.0.2",
     "react": "^0.14.3",
     "react-document-title": "^2.0.1",
     "react-dom": "^0.14.3",
     "react-responsive-grid": "^0.3.0",
     "react-router": "^0.13.5",
-    "typography": "^0.6.2"
+    "typography": "^0.6.2",
+    "underscore": "^1.8.3"
   }
 }
